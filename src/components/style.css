@@ -1,0 +1,81 @@
+.Navbar{
+    display: flex;
+    /* margin: 5px; */
+    padding: 5px;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background:lightgray;
+}
+
+.nav-links{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-links p{
+    margin: 2px;
+    padding: 2px;
+}
+
+.conf-links{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.conf-links img{
+    margin: 2px;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    transition: 0.2s;
+
+}
+
+.conf-links img:hover{
+    opacity: 0.5;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+
+.conf-links p{
+    margin: 2px;
+    padding: 2px;
+    font-family: monospace;
+    transition: 0.2s;
+
+}
+
+.conf-links p:hover{
+    opacity: 0.5;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.conf-links button{
+    margin: 2px;
+    padding: 2px;
+    font-family: monospace;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    transition: 0.2s;
+
+}
+
+
+.conf-links button:hover{
+    opacity: 0.5;
+    transition: 0.2s;
+    cursor: pointer;
+}
