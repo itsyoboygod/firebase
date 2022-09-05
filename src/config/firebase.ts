@@ -8,6 +8,7 @@ import {getAuth, GoogleAuthProvider} from "firebase/auth"
 const firebaseConfig = {
   apiKey: "AIzaSyCxRQYFKM9RisoWqCXwDPotH3qWgskUZqE",
   authDomain: "login-fire-50bfb.firebaseapp.com",
+  // authDomain: "https://itsyoboygod.github.io/",
   projectId: "login-fire-50bfb",
   storageBucket: "login-fire-50bfb.appspot.com",
   messagingSenderId: "229858287573",

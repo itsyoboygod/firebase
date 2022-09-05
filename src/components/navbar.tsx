@@ -22,7 +22,7 @@ export const Navbar = () => {
                 <div className="conf-links">
                     {user && (
                         <>    
-                            <img src={auth.currentUser?.photoURL || ""} />
+                            <img src={auth.currentUser?.photoURL || ""} alt="Guser" />
                             <p>{auth.currentUser?.displayName}</p>
                             <button onClick={signUserOut}>Logout</button>
                         </>
