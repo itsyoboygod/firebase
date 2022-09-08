@@ -1,6 +1,16 @@
+body {
+    background:
+        linear-gradient(red, transparent),
+        linear-gradient(to top left, lime, transparent),
+        linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .Post{
     display: flex;
-    margin: 5px;
+    margin: 50px 5px;
     padding: 5px;
     width: inherit;
     justify-content: center;
@@ -12,16 +22,38 @@ form{
     flex-direction: column;
     width: 50%;
     margin: 5px;
-    padding: 5px;
-    border: solid 1px black;
+    padding: 15px;
+    border: solid 1px whitesmoke;
     border-radius: 10px;
 }
 
+@media only screen and (max-width: 800px) {
+    form {
+        top: 10px;
+        width: 90%;
+        margin: 10px;
+    }
+  }
 input{
     height: 30px;
     font-family: monospace;
     margin: 2px;
-    padding: 2px;
+    padding: 2px 5px;
+    background: transparent;
+    /* border: solid 1px lightgrey; */
+    border: none;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    color: white;
+    transition: .2s;
+
+}
+
+::placeholder{
+    color: white;
+    margin: 2px;
+    align-items: center;
 }
 
 textarea{
@@ -29,7 +61,14 @@ textarea{
     height: 30px;
     font-family: monospace;
     margin: 2px;
-    padding: 2px;
+    padding: 10px 5px;
+    background: transparent;
+    /* border: solid 1px lightgrey; */
+    border: none;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    color: white;
 }
 
 textarea:focus , input:focus{
@@ -37,10 +76,33 @@ textarea:focus , input:focus{
 }
 
 
+.msngerror{
+    display: flex;
+    color: white;
+    border-radius: 10px;
+    place-content: center;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 9, 1, 0.3);
+}
+
+.noerror{
+    background-color: none;
+    margin: 0px;
+    padding: 0px;
+}
+
 
 form p{
     margin: 2px;
     padding: 2px;
     font-family: monospace;
     font-size: 1rem;
+}
+
+form input:last-child:hover{
+    transition: .2s;
+    cursor: pointer;
+    backdrop-filter: blur(0px);
+    background-color: transparent;
+    border:  solid 1px white;
 }

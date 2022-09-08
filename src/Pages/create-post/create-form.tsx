@@ -42,9 +42,9 @@ export const CreateForm = () => {
         <form onSubmit={handleSubmit(onCretaePost)}>
             <p>POST </p>
             <input placeholder='title..' {...register("title")}/>
-            <p style={{color: "tomato"}}>{errors.title?.message}</p>
+            <p className={`noerror ${errors ? 'msngerror' : 'noerror'}`}>{errors.title?.message}</p>
             <textarea placeholder='description..' {...register("description")}/>
-            <p style={{color: "tomato"}}>{errors.description?.message}</p>
+            <p className={`noerror ${errors ? 'msngerror' : 'noerror'}`}>{errors.description?.message}</p>
             <input type="submit"/>
         </form>
         )
