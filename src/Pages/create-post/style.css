@@ -1,0 +1,46 @@
+.Post{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    width: inherit;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+input{
+    height: 30px;
+    font-family: monospace;
+    margin: 2px;
+    padding: 2px;
+}
+
+textarea{
+    resize: none;
+    height: 30px;
+    font-family: monospace;
+    margin: 2px;
+    padding: 2px;
+}
+
+textarea:focus , input:focus{
+    outline: none;
+}
+
+
+
+form p{
+    margin: 2px;
+    padding: 2px;
+    font-family: monospace;
+    font-size: 1rem;
+}
