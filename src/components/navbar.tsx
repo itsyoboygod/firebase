@@ -16,6 +16,7 @@ export const Navbar = () => {
         <>
             <div className="Navbar">
                 <div className="nav-links">
+                    <i className="fa fa-home w3-xxxlarge"></i>
                     <p><Link to="/">Home</Link></p>
                     {!user ? (
                                <p><Link to="/login">Login</Link></p>
@@ -26,7 +27,10 @@ export const Navbar = () => {
                 <div className="conf-links">
                     {user && (
                         <>    
-                            <img src={auth.currentUser?.photoURL || ""} alt="Guser" />
+                            <div className="online-stats">
+                                <img  src={auth.currentUser?.photoURL || ""} alt="Guser" />
+                                <span data-count=""></span>
+                            </div>
                             <p>{auth.currentUser?.displayName}</p>
                             <button onClick={signUserOut}>Logout</button>
                         </>

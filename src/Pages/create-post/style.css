@@ -13,7 +13,9 @@ body {
     margin: 50px 5px;
     padding: 5px;
     width: inherit;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
 }
 
 form{
@@ -50,10 +52,19 @@ input{
 
 }
 
+input[type='password'] {
+    letter-spacing: -0.2em;
+    font-size: 1rem;
+}
+
+
 ::placeholder{
     color: white;
     margin: 2px;
     align-items: center;
+    opacity: .5;
+    font-size: 1rem;
+    letter-spacing: 0em;
 }
 
 textarea{
@@ -73,6 +84,9 @@ textarea{
 
 textarea:focus , input:focus{
     outline: none;
+    background: transparent;
+    transition: .2s;
+    /* border: solid 1px lightgray; */
 }
 
 
@@ -97,6 +111,10 @@ form p{
     padding: 2px;
     font-family: monospace;
     font-size: 1rem;
+    width: fit-content;
+    left: 0;
+    color: white;
+    font-weight: bolder;
 }
 
 form input:last-child:hover{
@@ -105,4 +123,6 @@ form input:last-child:hover{
     backdrop-filter: blur(0px);
     background-color: transparent;
     border:  solid 1px white;
+    font-weight: bolder;
+    transition: 0.2s;
 }
