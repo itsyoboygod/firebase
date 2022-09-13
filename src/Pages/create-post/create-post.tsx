@@ -5,12 +5,6 @@ export const CreatePost = () => {
         <>
             <div className="Post">
                 <CreateForm/>
-                {/* <CreateForm/>
-                <CreateForm/>
-                <CreateForm/>
-                <CreateForm/>
-                <CreateForm/>
-                <CreateForm/> */}
             </div>
         </>
     )

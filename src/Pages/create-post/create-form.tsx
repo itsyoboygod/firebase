@@ -45,7 +45,6 @@ export const CreateForm = () => {
             <p className={`noerror ${errors ? 'msngerror' : 'noerror'}`}>{errors.title?.message}</p>
             <textarea placeholder='description..' {...register("description")}/>
             <p className={`noerror ${errors ? 'msngerror' : 'noerror'}`}>{errors.description?.message}</p>
-            <input type="password" placeholder='password..' {...register("title")}/>
             <input type="submit"/>
         </form>
         )
