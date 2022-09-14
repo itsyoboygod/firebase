@@ -72,6 +72,17 @@
     outline: none;
     font-size: 2rem;
     background: transparent;
+    margin: 1px;
+    padding: 1px;
+    transition: .2s;
+
+}
+
+.like-btn button:hover{
+    cursor: pointer;
+    opacity: .5;
+    transition: .2s;
+
 }
 
 .title p, .body p, .footer p{

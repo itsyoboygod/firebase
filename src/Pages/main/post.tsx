@@ -6,7 +6,6 @@ import './userpost.css'
 import { useAuthState } from "react-firebase-hooks/auth"
 import { useEffect, useState } from "react"
 import { addDoc, collection, deleteDoc, doc, getDocs, query, where } from "firebase/firestore"
-import {useNavigate} from "react-router-dom"
 
 
 interface Props {
@@ -20,8 +19,6 @@ interface Like {
 }
 
 export const Post = (props: Props) => {
-
-    const navigate = useNavigate()
 
     const {post} = props
     const[user] = useAuthState(auth)
@@ -42,15 +39,13 @@ export const Post = (props: Props) => {
             const newDoc = await addDoc(likesRef, { userId: user?.uid, postId: post.id})
             if (user){
                 setLikes((prev) => 
-                prev ? [...prev, {userId:user.uid, likeId: newDoc.id}] :
+                prev ? [...prev, {userId: user?.uid, likeId: newDoc.id}] :
                  [{ userId: user.uid, likeId: newDoc.id}]
                 );
             }
         } catch (err){
             console.log(err)
         }
-
-        navigate("/")
     }
 
 
@@ -109,8 +104,12 @@ export const Post = (props: Props) => {
                             <span>…</span>
                         </div>
                         <div className="like-btn">
-                            <button onClick={addLike}>{hasUserLiked ? <>👎</> : <>👍</>}</button>
-                            {likes && <p>Likes: {likes?.length}</p>}
+                            <button onClick={hasUserLiked ? removeLike : addLike }>{hasUserLiked ?
+                             <span style={{color:"red", margin: "0",padding: "0", lineHeight: "25px", height: "30px", fontSize:"2rem"}}>
+                                ♥</span> :
+                             <span style={{color:"", margin: "0",padding: "0", lineHeight: "25px", height: "30px", fontSize:"1.5rem"}}>
+                                ♡</span>}</button>
+                            {likes && <p style={{padding:"1px", margin:"1px"}}>{likes?.length}</p>}
                         </div>
                     </div>
             </div>
