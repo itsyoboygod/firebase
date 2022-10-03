@@ -2,6 +2,8 @@ import { auth , provider } from "../config/firebase"
 import {signInWithPopup, GithubAuthProvider, getAuth} from "firebase/auth"
 import {useNavigate} from "react-router-dom"
 
+import './login.css'
+
 export const Login = () => {
     const navigate = useNavigate()
     const signInWithGoogle = async () => {
@@ -32,10 +34,10 @@ export const Login = () => {
 
     return (
         <>
-            <div>
-                <h1>Login Page</h1>
-                <p>Sign in with Google</p>
-                {/* <button onClick={signInWithGoogle}> Sign in with Google </button> */}
+            <div className="SingIn">
+                {/* <h1>Login Page</h1> */}
+                {/* <p>Sign in with Google</p> */}
+                <p><h1>Welcome !</h1></p>
                 <button onClick={signInWithGoogle}> Sign in with Google </button>
             </div>
         </>

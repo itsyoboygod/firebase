@@ -1,6 +1,10 @@
 import {getDocs, collection} from 'firebase/firestore'
 import { useEffect, useState } from "react"
 import {db} from '../../config/firebase'
+import { auth  } from "../../config/firebase"
+import {useNavigate} from "react-router-dom"
+
+import {useAuthState} from 'react-firebase-hooks/auth'
 import { Post } from './post';
 
    export interface Post {
@@ -13,7 +17,11 @@ import { Post } from './post';
 
 
 export const Home = () => {
-    
+
+    const [user] = useAuthState(auth)
+    const navigate = useNavigate()
+
+
     const [postsLists, setPostsLists] = useState<Post[] | null>(null)
     const postRef = collection(db, "posts")
 
@@ -29,13 +37,17 @@ export const Home = () => {
 
     return (
         <>
-            <div>
-                <div className='Main'>
-                    {postsLists?.map((post) =>
-                        <Post post={post}/>
-                     )}
-                </div>
-            </div>
+               { user ? (
+                        <div className='Main'>
+                            {postsLists?.map((post) =>
+                                <Post post={post}/>
+                            )}
+                        </div>
+                    ) :
+                    (
+                        navigate("/login")
+                    )
+                }
         </>
     )
 }

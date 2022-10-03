@@ -1,0 +1,35 @@
+.SingIn{
+    display: flex;
+    margin: 50px auto;
+    padding: 50px;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    font-family: monospace;
+
+    backdrop-filter: blur(2px);
+    background: transparent;
+    background-color: hsla(0,0%,100%,.3);
+}
+
+.SingIn button{
+    backdrop-filter: blur(2px);
+    background: transparent;
+    background-color: hsla(0,0%,100%,.3);
+    border: none;
+    color: #000;
+    font-family: monospace;
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+    transition: .2s;
+}
+
+.SingIn button:hover{
+    transition: .2s;
+    cursor: pointer;
+    backdrop-filter: blur(0px);
+    background-color: transparent;
+    border:  solid 1px white;
+    font-weight: bolder;
+}
