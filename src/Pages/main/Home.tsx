@@ -30,7 +30,6 @@ export const Home = () => {
     return (
         <>
             <div>
-                <h1>Home Page</h1>
                 <div className='Main'>
                     {postsLists?.map((post) =>
                         <Post post={post}/>

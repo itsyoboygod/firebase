@@ -85,8 +85,8 @@ export const Post = (props: Props) => {
             <div className="post-header">
                 <div className="post-user-pic">
                     <div className="online-stats">
-                        <img  src={auth.currentUser?.photoURL || ""} alt="Guser" />
-                        <span data-count=""></span>
+                        {/* <img  src={auth.currentUser?.photoURL || ""} alt="Guser" /> */}
+                        {/* <span data-count=""></span> */}
                     </div>
                 </div>
                 <div className="post-user-info">

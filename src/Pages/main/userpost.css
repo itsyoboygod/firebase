@@ -101,6 +101,7 @@
 .title p{
     font-weight: bold;
     font-size: .8rem;
+    text-align: start;
 }
 
 .body{
