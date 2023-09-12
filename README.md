@@ -4,7 +4,7 @@ This is a presentation of a simple Login , Logout with Firebase &amp; ReactJS/.t
 
 ![home_scrsht](https://github.com/itsyoboygod/firebase/assets/58955082/b5f318b5-4a3a-4cba-b574-3b09abb31a1a)
 
-## You can simply sing in with you google account with a few steps
+## You can simply sign in with you google account with a few steps
 
 After you login , you'll be redirect to the home page with all posts from everyone who have prevoiusly sign in !
 
